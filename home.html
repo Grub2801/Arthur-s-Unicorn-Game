@@ -27,7 +27,8 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="animate.min.css">
+  <!-- Annimate CSS -->
+  <link rel="stylesheet" href="css/animate.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -111,7 +112,7 @@
 
             <div class="row">
 
-              <div class="col-lg-2 col-md-3 col-xs-6 thumb animated infinite bounce">
+              <div class="col-lg-2 col-md-3 col-xs-6 thumb">
                 <img class="img-responsive" src="images/ajax.jpg" alt="ajax">
               </div>
               <div class="col-lg-2 col-md-3 col-xs-6 thumb">
@@ -282,6 +283,19 @@
   <!-- Scrolling Nav JavaScript -->
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/scrolling-nav.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+
+    $('.thumb img').mouseover(function() {
+      $( this ).toggleClass( 'animated bounce' );
+      });
+//     .mouseout(function () {
+//       $( this).
+//     })
+// );
+
+  </script>
 
 </body>
 
