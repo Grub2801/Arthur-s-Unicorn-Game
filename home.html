@@ -1,42 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script
-      language="javascript"
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/p5.min.js">
-
-    </script>
-    <script
-      language="javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/addons/p5.sound.js">
-    </script>
-    <script
-      language="javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/addons/p5.sound.min.js">
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/gh/bmoren/p5.collide2D/p5.collide2d.min.js"></script>
-
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArtJ - Profile</title
+    <!-- Google font stylesheet -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="unicorn.png">
-    <meta charset="utf-8" />
-    <title>Arthur's Jumping Unicorn Game</title>
-    <style>
-    html, body {
-        margin: 0;
-        padding: 0;
-      }
-      canvas {
-        display: block;
-      }
-      </style>
-  </head>
-  <body>
-    <script src="unicorn.js"></script>
-    <script src="train.js"></script>
-    <script src="sketch.js"></script>
-  </body>
+    <link rel="icon" href="artj.png">
+
+</head>
+
+<body>
+    <section class="hero is-fullheight is-default is-bold">
+        <div class="hero-head">
+            <nav class="navbar is-white">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="">
+                            <img src="artj.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <div class="tabs is-right">
+                                <ul>
+                                    <li><a href="home.html">Home</a></li>
+                                    <li><a href="unicorn.html">Projects</a></li>
+                                    <!-- <li><a href="">Features</a></li> -->
+                                    <!-- <li><a href="">Team</a></li> -->
+                                    <!-- <li><a href="">Help</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="columns is-vcentered">
+                    <div class="column is-5">
+                        <figure class="image ">
+                            <img id="profile-img" src="artj.png" alt="Description">
+                        </figure>
+                    </div>
+                    <div class="column is-6 is-offset-1">
+                        <h1 class="title is-2">
+                            Art J
+                        </h1>
+                        <h3 class="subtitle is-4">
+                            I am 8 years old. I live in Hong Kong. I play rugby, cricket, guitar and rugby. This is my site, enjoy!
+                        </h3>
+                        <br>
+                        <p class="has-text-centered">
+                            <a href="unicorn.html" class="button is-medium is-link is-outlined">
+                                Check out my lockdown project...
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-foot">
+            <div class="container">
+                <div class="tabs is-centered">
+                    <ul>
+                        <li><a>Thats all for now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
 </html>
