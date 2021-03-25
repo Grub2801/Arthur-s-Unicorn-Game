@@ -23,12 +23,12 @@ function preload(){
     // soundClassifier = ml5.soundClassifier('SpeechCommands18w', options);
     uImg = loadImage("unicorn.png");
     tImg = loadImage("train.png");
-    bImg = loadImage("purple.jpg");  
+    bImg = loadImage("purple.jpg");
 }
 
 function mousePressed(){
     trains.push(new Train());
-}       
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -38,7 +38,7 @@ function setup() {
   song.setVolume(0.5);
   bImgx2 = width;
   unicorn = new Unicorn();
-  // soundClassifier.classify(gotCommand); 
+  // soundClassifier.classify(gotCommand);
 }
 
 // Errors messages (CTRL SHIFT i) Chrome Developer Tools:
@@ -58,7 +58,7 @@ function loaded() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-     
+
 function reStart() {
     window.location.reload();
 }
@@ -71,14 +71,14 @@ function reStart() {
 //     if (results[0].label == 'up') {
 //       unicorn.jump();
 //     }
-//   }  
+//   }
 
-function keyPressed() {
+function touchStarted() {
   userStartAudio();
-    if (key == ' ') {
-      
+
+
       unicorn.jump();
-    }    
+
   }
 
 
@@ -88,10 +88,10 @@ function draw() {
     }
     image(bImg, bImgx1, 0, width, height);
     image(bImg, bImgx2, 0, width, height);
-  
+
     bImgx1 -= scrollSpeed;
     bImgx2 -= scrollSpeed;
-  
+
     if (bImgx1 < -width){
         bImgx1 = width;
     }
@@ -109,19 +109,19 @@ function draw() {
           btn = createButton('Click to restart');
           btn.parent(gameOver);
           gameOver.position(windowX, windowY);
-          btn.mousePressed(reStart); 
+          btn.mousePressed(reStart);
           noLoop();
         }
-        if(t.x + t.r < unicorn.x && !t.crossed){ 
+        if(t.x + t.r < unicorn.x && !t.crossed){
           t.crossed = true;
           unicorn.score ++;
         }
     }
-   
+
     unicorn.show();
-    unicorn.move();  
+    unicorn.move();
     let printScore = `Score = ${unicorn.score}`;
     fill(50);
     // Text wraps within text box
-    text(printScore, 10, 10, 70, 80); 
+    text(printScore, 10, 10, 70, 80);
 }
